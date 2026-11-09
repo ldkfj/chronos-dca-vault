@@ -1,0 +1,141 @@
+{
+  "contractName": "ICrossProgramInvocation",
+  "sourceName": "interfaces/IRomePrecompiles.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "pubkey",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint16",
+          "name": "offset",
+          "type": "uint16"
+        },
+        {
+          "internalType": "uint16",
+          "name": "length",
+          "type": "uint16"
+        }
+      ],
+      "name": "account_data_at",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "",
+          "type": "bytes"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "pubkey",
+          "type": "bytes32"
+        }
+      ],
+      "name": "account_lamports",
+      "outputs": [
+        {
+          "internalType": "uint64",
+          "name": "",
+          "type": "uint64"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "program_id",
+          "type": "bytes32"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "pubkey",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bool",
+              "name": "is_signer",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "is_writable",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct ICrossProgramInvocation.AccountMeta[]",
+          "name": "accounts",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "invoke",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "program_id",
+          "type": "bytes32"
+        },
+        {
+          "components": [
+            {
+              "internalType": "bytes32",
+              "name": "pubkey",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bool",
+              "name": "is_signer",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "is_writable",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct ICrossProgramInvocation.AccountMeta[]",
+          "name": "accounts",
+          "type": "tuple[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes32[]",
+          "name": "seeds",
+          "type": "bytes32[]"
+        }
+      ],
+      "name": "invoke_signed",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x"
+}

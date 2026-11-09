@@ -1,0 +1,109 @@
+{
+  "appName": "Chronos Vault",
+  "deployedAt": "2026-11-09T16:51:45.651Z",
+  "hadrian": {
+    "chainId": 200010,
+    "name": "Rome Hadrian",
+    "rpcUrl": "https://hadrian.testnet.romeprotocol.xyz/",
+    "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz",
+    "romeEvmProgramId": "RPTWwELXAY4KC9ZPHhaxp7Sq1hHtU3HNEgLbSegCcWf",
+    "vaultAddress": "0x32b15e9209bc5de627148852d78f553e80a7f085",
+    "vaultPda": "0xbc284f584256c0800bbf3fd44c2494aa6f125fd413d98cc26f25ae4bfd7f0be8",
+    "multicall3Address": "0xb7180d3c46632b582b99d9af3daae394fab9ae4c",
+    "deployTxHash": "0x11afd242e4b66731d258802313755fbec5f33efddd65eceab9efb8e53802e721",
+    "deploySolanaSettlementSig": "E41B4Ejep9Kt64A64wBBo24XEVggbcwYhSUjNNkgD8ESxj8qqmdD78SLpbV7uV4yRTdTCPUWb7HxpF7V66YTzxm",
+    "oracles": {
+      "SOL/USD": "0x567384ee000ca0418c386A73eC2b7466f9f99D6b",
+      "JUP/USD": "0xB328E64d8AA59f8231b09AfA62E67bc09Ac3BB61",
+      "ETH/USD": "0xFF6A4A6FE685574fb0Ba3ec2b59D4E8C1e2fEc38",
+      "BTC/USD": "0x2A6E178DC1d9B7372F187b7943B660E910957213"
+    },
+    "precompiles": {
+      "system": "0xff00000000000000000000000000000000000007",
+      "cpi": "0xff00000000000000000000000000000000000008",
+      "helper": "0xff00000000000000000000000000000000000009"
+    },
+    "solanaPrograms": {
+      "jupiterV6": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "meteoraDlmm": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "splMemo": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+      "splToken": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+    },
+    "wallets": {
+      "deployer": "0xef469EA73E17e629523e08CeAba67dF0b1759845",
+      "user1": "0xB7a93Ce9c043d410c627C95807f3d26423f3976e",
+      "keeper": "0x6e5F5060A41530adc9f014dF71Bddd425e026462"
+    },
+    "transactions": [
+      {
+        "label": "Contract Deployment (RomeDcaLimitVault + Self-Provisioned PDA)",
+        "role": "Deployer (#11)",
+        "from": "0xef469EA73E17e629523e08CeAba67dF0b1759845",
+        "txHash": "0x11afd242e4b66731d258802313755fbec5f33efddd65eceab9efb8e53802e721",
+        "solanaSignature": "E41B4Ejep9Kt64A64wBBo24XEVggbcwYhSUjNNkgD8ESxj8qqmdD78SLpbV7uV4yRTdTCPUWb7HxpF7V66YTzxm",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0x11afd242e4b66731d258802313755fbec5f33efddd65eceab9efb8e53802e721"
+      },
+      {
+        "label": "Create DCA Strategy #1 (USDC -> SOL via Jupiter V6, 4 Slices)",
+        "role": "User 1 (#15)",
+        "from": "0xB7a93Ce9c043d410c627C95807f3d26423f3976e",
+        "txHash": "0x13440456014665bc04ffc29a9675d93c384deb89cb4bb76205d845c92bb10b5c",
+        "solanaSignature": "4iNC1AAvSGUmrMt3gbBMim7LEhsntVCUqqdxRcUny1L434tTphz8DfMH67R5x9HCkXWMdURrUu8Nn4NMjWc7fRUZ",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0x13440456014665bc04ffc29a9675d93c384deb89cb4bb76205d845c92bb10b5c"
+      },
+      {
+        "label": "Place Limit Order #2 (USDC -> JUP @ <= $0.3000 via Rome Oracle Gateway)",
+        "role": "User 1 (#15)",
+        "from": "0xB7a93Ce9c043d410c627C95807f3d26423f3976e",
+        "txHash": "0x6fc8019f6eedcb07c81f7f81ae30679d28d6a1fa05d6b24cc9c507cc7487ef3d",
+        "solanaSignature": "62YK6W3ZEj9V2XwucAfQmyfqhyFAdWkTj3sVMJJoXwJANRu3mGjtvdu8GUQ4pqiNeirk95XkrPtjhyoN4CE6zL4R",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0x6fc8019f6eedcb07c81f7f81ae30679d28d6a1fa05d6b24cc9c507cc7487ef3d"
+      },
+      {
+        "label": "Create Dual-Lane Solana DCA Strategy #3 (USDC -> ETH via Meteora DLMM)",
+        "role": "Solana Dual-Lane (#11)",
+        "from": "0xef469EA73E17e629523e08CeAba67dF0b1759845",
+        "txHash": "0x4d20669b3c70b95d2f72a5ae6e6bd5387a13953056eccb897670a93ceda1efa1",
+        "solanaSignature": "3Pjj4cNdN2ovJz5A2N43uaefXVnoW5yTMAsuCmeCJtxkYBvfMjghwoBfiayDqpz1kxipe5dGZtVi42QCESdDYVAo",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0x4d20669b3c70b95d2f72a5ae6e6bd5387a13953056eccb897670a93ceda1efa1"
+      },
+      {
+        "label": "Execute Atomic CPI Swap (Order #1 Slice #1 via 0xFF...08 & 0xFF...09)",
+        "role": "Keeper (#16)",
+        "from": "0x6e5F5060A41530adc9f014dF71Bddd425e026462",
+        "txHash": "0x57aaae1f8514809dea5d7a7959fe9da4d574cd4c6574e9af700f55b46d77ca6b",
+        "solanaSignature": "2a7rkPYJMN8VueDQvRy7w1GERktoReMXU38a2BDP23vZfrbMXyChV7ryAiS2XL4P1oFKh4xpzRJu6JAumemEhsd8",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0x57aaae1f8514809dea5d7a7959fe9da4d574cd4c6574e9af700f55b46d77ca6b"
+      },
+      {
+        "label": "Execute Keeper Atomic Batch Fill (Limit Order #2 Settled via Solana CPI)",
+        "role": "Keeper (#16)",
+        "from": "0x6e5F5060A41530adc9f014dF71Bddd425e026462",
+        "txHash": "0x23f6bffb9d27d81c578114a150b7c63c42e04804eebe522ff64685b6b06b0e15",
+        "solanaSignature": "2VdRWVL2wL9iUydy8sLJx2GqGZSnydgii49oAihzXx86135vDrQ4cjqxc7ytKhpMqtMPKYGiEm2RKZZCQqxaEqwM",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0x23f6bffb9d27d81c578114a150b7c63c42e04804eebe522ff64685b6b06b0e15"
+      },
+      {
+        "label": "Execute Dual-Lane Solana DCA Slice (Order #3 Slice #1 via 0xFF...08 & 0xFF...09)",
+        "role": "Keeper (#16)",
+        "from": "0x6e5F5060A41530adc9f014dF71Bddd425e026462",
+        "txHash": "0xb0419d57b5b6eebf5f1a19a238ad97deedfa1a22af38408976152a64e1c532ea",
+        "solanaSignature": "2zdz8VU84q6Y1bamyGksUeg6gqVaWX6kn4uFurqHGSKYjouPgVqw4JacKPs7Mbt67P9ujJuSusYra7hEmefnkQUn",
+        "explorerUrl": "https://via-hadrian.testnet.romeprotocol.xyz/tx/0xb0419d57b5b6eebf5f1a19a238ad97deedfa1a22af38408976152a64e1c532ea"
+      }
+    ]
+  },
+  "rubicon": {
+    "chainId": 7531,
+    "name": "Rome Rubicon Mainnet",
+    "rpcUrl": "https://rubicon.mainnet.romeprotocol.xyz/",
+    "explorerUrl": "https://via.mainnet.romeprotocol.xyz",
+    "romeEvmProgramId": "RomePq9X3iAoTr813HR7uRarafFDUJty6GdiEceYpzX",
+    "multicall3Address": "0xd6e0b13e8f6185100357b06f2b3a9f3e2d31a759",
+    "solanaMainnetPrograms": {
+      "jupiterV6": "JUP6LkbZbjS1jKKwapdHNy74zcZ3tLUZoi5QNyVTaV4",
+      "meteoraDlmm": "LBUZKhRxPF3XUpBCjp4YzTKgLccjZhTSDM9YuVaPwxo",
+      "splMemo": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr"
+    }
+  }
+}
