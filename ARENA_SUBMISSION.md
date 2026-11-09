@@ -17,7 +17,7 @@ An automated Dollar-Cost Averaging (DCA) and target-price limit order vault buil
 Both
 
 5. Links:
-- Website: https://04-jupiter-dca-vault.vercel.app
+- Website: https://chronos-dca-vault.vercel.app
 - GitHub: https://github.com/ldkfj/chronos-dca-vault
 - X: https://x.com/romeprotocol
 
